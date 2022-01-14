@@ -1,9 +1,14 @@
 const option = ["rock", "paper", "scissors"]; 
 function computerPlay(){ 
   return option[Math.floor(Math.random()*option.length)] 
-};
-const playerSelection = 'rock';
-const computerSelection = computerPlay(); 
+}; 
+function playerSelect() {
+  const prompt = require('prompt-sync')();
+  const answer = prompt('Rock paper or scissor?');
+  return answer;
+}
+const playerSelection = playerSelect();
+const computerSelection = computerPlay();
 function playRound(playerSelection, computerSelection) { 
   if(playerSelection == computerSelection){ 
     return ("tied game"); 
