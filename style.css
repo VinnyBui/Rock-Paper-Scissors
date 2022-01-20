@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: #457b9d;
+  color: #f1faee;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 25px;
+  background: linear-gradient(to bottom, #1d3557, #457b9d);
+  box-shadow: 5px 2px 20px #1d3557;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-btn {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}

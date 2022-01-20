@@ -9,6 +9,10 @@ function playerSelect() {
   let answer = prompt('Rock paper or scissor?');
   return answer;
 };
+let playerSelection = "";
+const computerSelection = computerPlay();
+
+
 function playRound(playerSelection, computerSelection) { 
   if(playerSelection == computerSelection){ 
     return("tied game");
@@ -26,6 +30,33 @@ function playRound(playerSelection, computerSelection) {
     console.log("try again");
   }
 }; 
+
+//buttons
+const rock_btn = document.querySelector(".rock-btn");
+
+rock_btn.onclick = () => {
+  playerSelection = "rock";
+  console.log(playRound(playerSelection, computerSelection));
+};
+
+const paper_btn = document.querySelector(".paper-btn");
+
+paper_btn.onclick = () => {
+  playerSelection = "paper";
+  console.log(playRound(playerSelection, computerSelection));
+};
+
+const scissor_btn = document.querySelector(".scissor-btn");
+
+scissor_btn.onclick = () => {
+  playerSelection = "scissor";
+  console.log(playRound(playerSelection, computerSelection));
+};
+
+
+
+
+/*
 function game(){
   while(true){
     const playerSelection = playerSelect();
@@ -46,9 +77,4 @@ function game(){
       return ("You lost to the computer");   
     }
   }
-}
-console.log(game())
-
-console.log("hello")
-console.log("hello")
-console.log("hello")
+}*/
