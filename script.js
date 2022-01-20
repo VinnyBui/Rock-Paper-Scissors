@@ -15,17 +15,19 @@ function playRound(playerSelection, computerSelection) {
   } else if
   ((computerSelection == "rock" && playerSelection == "scissor") || 
     (computerSelection == "scissor" && playerSelection == "paper") || 
-    (computerSelection == "paper" && playerSelection == "rock")){ 
+    (computerSelection == "paper" && playerSelection == "rock")){
+      computerScore++; 
     return("You lost"); 
   }else if 
   ((playerSelection == "rock" && computerSelection == "scissor") || 
   (playerSelection == "scissor" && computerSelection == "paper") || 
   (playerSelection == "paper" && computerSelection == "rock") ){
+    playerScore++;
     return("You won");
   }
 }; 
 
-
+//UI
 //display ai_result
 const display = document.querySelector(".display");
 
@@ -34,7 +36,7 @@ const ai_result = document.querySelector('#ai_pick');
 //buttons
 const rock_btn = document.querySelector(".rock-btn");
 
-rock_btn.onclick = () => {
+rock_btn.addEventListener('click', () => {
   playerSelection = "rock";
   console.log(playRound(playerSelection, computerSelection));
   result = playRound(playerSelection, computerSelection);
@@ -42,11 +44,12 @@ rock_btn.onclick = () => {
   ai_result.textContent = result;
 
   display.appendChild(ai_result);
-};
+});
+
 
 const paper_btn = document.querySelector(".paper-btn");
 
-paper_btn.onclick = () => {
+paper_btn.addEventListener('click', () => {
   playerSelection = "paper";
   console.log(playRound(playerSelection, computerSelection));
   result = playRound(playerSelection, computerSelection);
@@ -54,11 +57,11 @@ paper_btn.onclick = () => {
   ai_result.textContent = result;
 
   display.appendChild(ai_result);
-};
+});
 
 const scissor_btn = document.querySelector(".scissor-btn");
 
-scissor_btn.onclick = () => {
+scissor_btn.addEventListener('click', () => {
   playerSelection = "scissor";
   console.log(playRound(playerSelection, computerSelection));
   result = playRound(playerSelection, computerSelection);
@@ -66,28 +69,6 @@ scissor_btn.onclick = () => {
   ai_result.textContent = result;
 
   display.appendChild(ai_result);
-};
+});
 
 
-
-
-function game(){
-  while(true){
-    const computerSelection = computerPlay();
-    let rounds = playRound(playerSelection, computerSelection);
-    if(rounds == "You won"){
-      playerScore++;
-      console.log(`You won, score is ${playerScore} to ${computerScore}`);
-    }else if (rounds == "You lost"){
-      computerScore++;
-      console.log(`You lost, score is ${playerScore} to ${computerScore}`);
-    }else{
-      console.log(`tied game, score is ${playerScore} to ${computerScore}`); 
-    }
-    if(playerScore == 5){
-      return ("You beat the computer");
-    }else if(computerScore == 5){
-      return ("You lost to the computer");   
-    }
-  }
-}
