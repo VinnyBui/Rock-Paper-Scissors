@@ -48,4 +48,7 @@ function game(){
   }
 }
 console.log(game())
+
+console.log("hello")
+console.log("hello")
 console.log("hello")
