@@ -1,15 +1,11 @@
 const option = ["rock", "paper", "scissor"]; 
 var playerScore = 0;
 var computerScore = 0;
+var playerSelection = "";
+var result = "";
 function computerPlay(){ 
   return option[Math.floor(Math.random()*option.length)] 
 }; 
-function playerSelect() {
-  const prompt = require('prompt-sync')();
-  let answer = prompt('Rock paper or scissor?');
-  return answer;
-};
-let playerSelection = "";
 const computerSelection = computerPlay();
 
 
@@ -26,10 +22,14 @@ function playRound(playerSelection, computerSelection) {
   (playerSelection == "scissor" && computerSelection == "paper") || 
   (playerSelection == "paper" && computerSelection == "rock") ){
     return("You won");
-  }else{
-    console.log("try again");
   }
 }; 
+
+
+//display ai_result
+const display = document.querySelector(".display");
+
+const ai_result = document.querySelector('#ai_pick');
 
 //buttons
 const rock_btn = document.querySelector(".rock-btn");
@@ -37,6 +37,11 @@ const rock_btn = document.querySelector(".rock-btn");
 rock_btn.onclick = () => {
   playerSelection = "rock";
   console.log(playRound(playerSelection, computerSelection));
+  result = playRound(playerSelection, computerSelection);
+
+  ai_result.textContent = result;
+
+  display.appendChild(ai_result);
 };
 
 const paper_btn = document.querySelector(".paper-btn");
@@ -44,6 +49,11 @@ const paper_btn = document.querySelector(".paper-btn");
 paper_btn.onclick = () => {
   playerSelection = "paper";
   console.log(playRound(playerSelection, computerSelection));
+  result = playRound(playerSelection, computerSelection);
+
+  ai_result.textContent = result;
+
+  display.appendChild(ai_result);
 };
 
 const scissor_btn = document.querySelector(".scissor-btn");
@@ -51,15 +61,18 @@ const scissor_btn = document.querySelector(".scissor-btn");
 scissor_btn.onclick = () => {
   playerSelection = "scissor";
   console.log(playRound(playerSelection, computerSelection));
+  result = playRound(playerSelection, computerSelection);
+
+  ai_result.textContent = result;
+
+  display.appendChild(ai_result);
 };
 
 
 
 
-/*
 function game(){
   while(true){
-    const playerSelection = playerSelect();
     const computerSelection = computerPlay();
     let rounds = playRound(playerSelection, computerSelection);
     if(rounds == "You won"){
@@ -77,4 +90,4 @@ function game(){
       return ("You lost to the computer");   
     }
   }
-}*/
+}

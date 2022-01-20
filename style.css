@@ -5,13 +5,14 @@
 
 body {
   background: #457b9d;
-  color: #f1faee;
+  color: black;
 }
 
 .header {
   display: flex;
   justify-content: center;
   padding: 40px 0px;
+  color: #f1faee;
   font-family: Comic Sans MS, Comic Sans, cursive;
   font-size: 25px;
   background: linear-gradient(to bottom, #1d3557, #457b9d);
@@ -41,4 +42,13 @@ img {
 button {
   border: none;
   background-color: transparent;
+}
+
+.display {
+  display: flex;
+  justify-content: space-evenly;
+  border: .20em solid black;
+  border-radius: 5px;
+  background: #f1faee;
+  padding: 20px;
 }
