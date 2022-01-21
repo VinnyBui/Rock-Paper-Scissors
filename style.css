@@ -27,7 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 800px;
-  margin: 140px auto;
+  margin: 140px auto 100px;
   gap: 25px;
 }
 
@@ -79,6 +79,12 @@ img {
   color: #f1faee;
   padding: 20px;
   font-size: 25px;
+}
+
+/*Picks*/
+.display_icon {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /*Footer*/

@@ -33,6 +33,10 @@ const paper_btn = document.querySelector(".paper-btn");
 const scissor_btn = document.querySelector(".scissor-btn");
 const player_score = document.querySelector('#player_score');
 const comp_score = document.querySelector('#comp_score');
+const player_pick = document.querySelector(".playerPick");
+const comp_pick = document.querySelector(".compPick");
+const playerPickIcon = document.querySelector(".playerPick");
+const compPickIcon = document.querySelector(".compPick");
 
 rock_btn.addEventListener('click', () => game("rock"));
 
@@ -48,7 +52,7 @@ function game(playerSelection){
   const computerSelection = computerPlay();
   playRound(playerSelection, computerSelection);
   updateRound();
-
+  updatePick(playerSelection, computerSelection);
   if(gameover()){
     if(playerScore == 5){
       round_result.textContent = "YOU BEAT THE COMPUTER";
@@ -62,6 +66,24 @@ function updateRound(){
   round_result.textContent = Round_winner;
   player_score.textContent = `Player: ${playerScore}`;
   comp_score.textContent = `Computer: ${computerScore}`;
+};
+
+function updatePick(playerSelection, computerSelection){
+  if(playerSelection == 'rock'){
+    playerPickIcon.src="./imgs/rock.png"; 
+  }else if(playerSelection == 'paper'){
+    playerPickIcon.src="./imgs/paper.png";
+  }else{
+    playerPickIcon.src="./imgs/scissors.png";
+  }
+
+  if(computerSelection == 'rock'){
+    compPickIcon.src="./imgs/rock.png";  
+  }else if(computerSelection == 'paper'){
+    compPickIcon.src="./imgs/paper.png";
+  }else{
+    compPickIcon.src="./imgs/scissors.png";
+  }
 };
 
 function restart(){
