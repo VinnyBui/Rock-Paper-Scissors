@@ -51,7 +51,11 @@ function game(playerSelection){
   updateRound();
 
   if(gameover()){
-    round_result.textContent = "You won the GAME!!!";
+    if(playerScore == 5){
+      round_result.textContent = "YOU BEAT THE COMPUTER";
+    }else if(computerScore == 5){
+      round_result.textContent = "AI HAS WON";
+    }
   }
 };
 
