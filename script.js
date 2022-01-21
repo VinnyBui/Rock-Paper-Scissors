@@ -9,7 +9,7 @@ function computerPlay(){
 
 function playRound(playerSelection, computerSelection) { 
   if(playerSelection == computerSelection){ 
-    Round_winner = "tied game";
+    Round_winner = "Tied game";
   } else if
   ((computerSelection == "rock" && playerSelection == "scissor") || 
     (computerSelection == "scissor" && playerSelection == "paper") || 
@@ -27,14 +27,13 @@ function playRound(playerSelection, computerSelection) {
 
 //UI
 const display = document.querySelector(".display_round");
-const round_result = document.querySelector('#round_result');
+const round_result = document.getElementById("round_result");
 const rock_btn = document.querySelector(".rock-btn");
 const paper_btn = document.querySelector(".paper-btn");
 const scissor_btn = document.querySelector(".scissor-btn");
 const player_score = document.querySelector('#player_score');
 const comp_score = document.querySelector('#comp_score');
 
-//buttons
 rock_btn.addEventListener('click', () => game("rock"));
 
 paper_btn.addEventListener('click', () => game("paper"));
@@ -71,4 +70,4 @@ function restart(){
   round_result.textContent = '❔';
   player_score.textContent = `Player: ${playerScore}`;
   comp_score.textContent = `Computer: ${computerScore}`
-}
+};
