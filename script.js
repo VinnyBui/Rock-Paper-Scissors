@@ -2,73 +2,69 @@ const option = ["rock", "paper", "scissor"];
 var playerScore = 0;
 var computerScore = 0;
 var playerSelection = "";
-var result = "";
+var Round_winner = "";
 function computerPlay(){ 
   return option[Math.floor(Math.random()*option.length)] 
 }; 
-const computerSelection = computerPlay();
-
 
 function playRound(playerSelection, computerSelection) { 
   if(playerSelection == computerSelection){ 
-    return("tied game");
+    Round_winner = "tied game";
   } else if
   ((computerSelection == "rock" && playerSelection == "scissor") || 
     (computerSelection == "scissor" && playerSelection == "paper") || 
     (computerSelection == "paper" && playerSelection == "rock")){
-      computerScore++; 
-    return("You lost"); 
+    computerScore++; 
+    Round_winner = "You lost";
   }else if 
   ((playerSelection == "rock" && computerSelection == "scissor") || 
   (playerSelection == "scissor" && computerSelection == "paper") || 
   (playerSelection == "paper" && computerSelection == "rock") ){
     playerScore++;
-    return("You won");
+    Round_winner = "You won";
   }
 }; 
 
 //UI
-//display ai_result
-const display = document.querySelector(".display");
-
-const ai_result = document.querySelector('#ai_pick');
+const display = document.querySelector(".display_round");
+const round_result = document.querySelector('#round_result');
+const rock_btn = document.querySelector(".rock-btn");
+const paper_btn = document.querySelector(".paper-btn");
+const scissor_btn = document.querySelector(".scissor-btn");
+const player_score = document.querySelector('#player_score');
+const comp_score = document.querySelector('#comp_score');
 
 //buttons
-const rock_btn = document.querySelector(".rock-btn");
+rock_btn.addEventListener('click', () => game("rock"));
 
-rock_btn.addEventListener('click', () => {
-  playerSelection = "rock";
-  console.log(playRound(playerSelection, computerSelection));
-  result = playRound(playerSelection, computerSelection);
+paper_btn.addEventListener('click', () => game("paper"));
 
-  ai_result.textContent = result;
+scissor_btn.addEventListener('click', () => game("scissor"));
 
-  display.appendChild(ai_result);
-});
+function gameover(){
+  return playerScore == 5 || computerScore == 5;
+};
 
+function game(playerSelection){
+  const computerSelection = computerPlay();
+  playRound(playerSelection, computerSelection);
+  updateRound();
 
-const paper_btn = document.querySelector(".paper-btn");
+  if(gameover()){
+    round_result.textContent = "You won the GAME!!!";
+  }
+};
 
-paper_btn.addEventListener('click', () => {
-  playerSelection = "paper";
-  console.log(playRound(playerSelection, computerSelection));
-  result = playRound(playerSelection, computerSelection);
+function updateRound(){
+  round_result.textContent = Round_winner;
+  player_score.textContent = `Player: ${playerScore}`;
+  comp_score.textContent = `Computer: ${computerScore}`;
+};
 
-  ai_result.textContent = result;
-
-  display.appendChild(ai_result);
-});
-
-const scissor_btn = document.querySelector(".scissor-btn");
-
-scissor_btn.addEventListener('click', () => {
-  playerSelection = "scissor";
-  console.log(playRound(playerSelection, computerSelection));
-  result = playRound(playerSelection, computerSelection);
-
-  ai_result.textContent = result;
-
-  display.appendChild(ai_result);
-});
-
-
+function restart(){
+  playerScore = 0;
+  computerScore = 0;
+  round_result.textContent = '❔';
+  player_score.textContent = `Player: ${playerScore}`;
+  comp_score.textContent = `Computer: ${computerScore}`
+}

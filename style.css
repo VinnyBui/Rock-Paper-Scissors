@@ -24,6 +24,7 @@ body {
   flex-direction: column;
   max-width: 800px;
   margin: 150px auto;
+  gap: 25px;
 }
 
 .player-btn {
@@ -44,11 +45,19 @@ button {
   background-color: transparent;
 }
 
-.display {
-  display: flex;
-  justify-content: space-evenly;
+.display_round {
+  text-align: center;
   border: .20em solid black;
   border-radius: 5px;
   background: #f1faee;
   padding: 20px;
+  font: 20px Comic Sans MS, Comic Sans, cursive;
+}
+
+.display_score {
+  display: flex;
+  justify-content: space-around;
+  color: #f1faee;
+  padding: 20px;
+  font: 20px Comic Sans MS, Comic Sans, cursive;
 }
