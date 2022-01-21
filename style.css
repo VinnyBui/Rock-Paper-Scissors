@@ -7,6 +7,7 @@ body {
   background: #649ec2;
   color: black;
   margin: 0;
+  font-family: Comic Sans MS, Comic Sans, cursive;
 }
 
 .header {
@@ -14,8 +15,7 @@ body {
   justify-content: center;
   padding: 40px 0px;
   color: #e5e5e5;
-  font-family: Comic Sans MS, Comic Sans, cursive;
-  font-size: 25px;
+  font-size: 2em;
   background: linear-gradient(to bottom, #1d3557, #457b9d);
   box-shadow: 5px 2px 20px #1d3557;
 }
@@ -40,18 +40,33 @@ button {
   background-color: #e5e5e5;
 }
 
+button:hover {
+  border-color: #e5e5e5;
+}
+
 img {
   padding: 35px;
   width: 200px;
 }
 
+.rockImg:hover {
+  padding: 5px;
+}
+
+.paperImg:hover {
+  padding: 5px;
+}
+
+.scissorImg:hover {
+  padding: 5px;
+}
+
 .display_round {
   text-align: center;
-  border: .20em solid black;
-  border-radius: 5px;
-  background: #e5e5e5;
   padding: 20px;
-  font: 20px Comic Sans MS, Comic Sans, cursive;
+  font-size: 20px;
+  color: #f1faee;
+  font-size: 3em;
 }
 
 .display_score {
@@ -59,7 +74,7 @@ img {
   justify-content: space-around;
   color: #f1faee;
   padding: 20px;
-  font: 20px Comic Sans MS, Comic Sans, cursive;
+  font-size: 25px;
 }
 
 .footer {
@@ -70,7 +85,6 @@ img {
   justify-content: center;
   background: linear-gradient(to top, #1d3557, #457b9d);
   color: #e5e5e5;
-  font-family: Comic Sans MS, Comic Sans, cursive;
 }
 
 .wrap {
