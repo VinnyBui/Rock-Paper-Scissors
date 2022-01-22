@@ -6,7 +6,7 @@
 
 body {
   background: #649ec2;
-  color: black;
+  color: #f1faee;
   margin: 0;
   font-family: Comic Sans MS, Comic Sans, cursive;
 }
@@ -16,7 +16,6 @@ body {
   display: flex;
   justify-content: center;
   padding: 40px 0px;
-  color: #e5e5e5;
   font-size: 2em;
   background: linear-gradient(to bottom, #1d3557, #457b9d);
   box-shadow: 5px 2px 20px #1d3557;
@@ -27,8 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 800px;
-  margin: 140px auto 100px;
-  gap: 25px;
+  margin: 50px auto 50px;
 }
 
 .player-btn {
@@ -69,14 +67,12 @@ img {
   text-align: center;
   padding: 20px;
   font-size: 20px;
-  color: #f1faee;
   font-size: 3em;
 }
 
 .display_score {
   display: flex;
   justify-content: space-around;
-  color: #f1faee;
   padding: 20px;
   font-size: 25px;
 }
@@ -87,15 +83,62 @@ img {
   justify-content: space-evenly;
 }
 
+/*Modal*/
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.bg-activate {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  background-color: #649ec2;
+  height: 25%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  border-radius: 5%;
+}
+
+.annouceWinner {
+  font-size: 50px;
+}
+
+.restart-btn {
+  background-color: #457b9d;
+  color: #f1faee;
+  border: solid #457b9d;
+  border-radius: 10%;
+  cursor: pointer;
+  height: 65px;
+  width: 150px;
+  font-size: 26px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
 /*Footer*/
 .footer {
-  position: absolute;
   bottom: 0px;
   width: 100%;
   display: flex;
   justify-content: center;
   background: linear-gradient(to top, #1d3557, #457b9d);
-  color: #e5e5e5;
 }
 
 .wrap {

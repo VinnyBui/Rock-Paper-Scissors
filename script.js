@@ -37,12 +37,17 @@ const player_pick = document.querySelector(".playerPick");
 const comp_pick = document.querySelector(".compPick");
 const playerPickIcon = document.querySelector(".playerPick");
 const compPickIcon = document.querySelector(".compPick");
+const endgameModal = document.querySelector(".modal-bg");
+const modalTxt = document.querySelector(".annouceWinner");
+const restartBtn = document.querySelector(".restart-btn");
 
 rock_btn.addEventListener('click', () => game("rock"));
 
 paper_btn.addEventListener('click', () => game("paper"));
 
 scissor_btn.addEventListener('click', () => game("scissor"));
+
+restartBtn.addEventListener('click', () => restart());
 
 function gameover(){
   return playerScore == 5 || computerScore == 5;
@@ -55,9 +60,11 @@ function game(playerSelection){
   updatePick(playerSelection, computerSelection);
   if(gameover()){
     if(playerScore == 5){
-      round_result.textContent = "YOU BEAT THE COMPUTER";
+      modalActivate();
+      modalTxt.textContent = "YOU WON";
     }else if(computerScore == 5){
-      round_result.textContent = "AI HAS WON";
+      modalActivate();
+      modalTxt.textContent = "YOU LOST";
     }
   }
 };
@@ -86,10 +93,15 @@ function updatePick(playerSelection, computerSelection){
   }
 };
 
+function modalActivate(){
+  endgameModal.classList.add('bg-activate');
+};
+
 function restart(){
   playerScore = 0;
   computerScore = 0;
   round_result.textContent = '❔';
   player_score.textContent = `Player: ${playerScore}`;
-  comp_score.textContent = `Computer: ${computerScore}`
+  comp_score.textContent = `Computer: ${computerScore}`;
+  endgameModal.classList.remove('bg-activate');
 };
