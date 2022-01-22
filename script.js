@@ -104,4 +104,6 @@ function restart(){
   player_score.textContent = `Player: ${playerScore}`;
   comp_score.textContent = `Computer: ${computerScore}`;
   endgameModal.classList.remove('bg-activate');
+  playerPickIcon.src="";
+  compPickIcon.src="";
 };

@@ -6,9 +6,12 @@
   <title>Rock Paper Scissors</title>
 </head>
 <body>
+  <div class="wrapper">
+    <!--Header-->
   <header class="header">
     <h1>Rock Paper Scissors</h1>
   </header>
+  <!--Main Content-->
   <div class="main-content">
     <div class="player-btn">
       <button class="rock-btn"><img class="rockImg" src="./imgs/rock.png" alt="rock"></button>
@@ -17,6 +20,7 @@
       <button class="scissor-btn"><img class="scissorImg"
         src="./imgs/scissors.png" alt="scissors"></button></button>
     </div>
+    <!--Score-->
     <div class="display_round">
       <p id="round_result">❔</p>
     </div>
@@ -24,27 +28,28 @@
       <p id="player_score">Player: 0 </p>
       <p id="comp_score">Computer: 0 </p>
     </div>
-  </div>
-  <div class="display_icon">
-    <img class="playerPick" src=""></img>
-    <p class="playerPick">VS</p>
-    <img class="compPick" src=""></img>
-  </div>
-
-    <!--MODAL-->
-    <div class="modal-bg">
-      <div class="modal">
-        <h2 class="annouceWinner">Winner</h2>
-        <button class="restart-btn">Try Again!</button>
-      </div>
+    <!--PlayerCompchoices-->
+    <div class="display_icon">
+      <img class="playerPick" src=""></img>
+      <p class="playerPick">VS</p>
+      <img class="compPick" src=""></img>
     </div>
-    
+  </div>
+  <!--Footer-->
   <footer class="footer">
     <div class = "wrap">
-      <h3>Copyright @ 2022 VinnyBui</h3>
+      <h3>Copyright @ 2022</h3>
     </div>
-    <a href="https://github.com/VinnyBui?tab=repositories"><img src="./imgs/github.png" alt="rock"></a>
+    <a href="https://github.com/VinnyBui?tab=repositories">Vinny Bui</a>
   </footer>
+  </div>
+  <!--MODAL-->
+  <div class="modal-bg">
+    <div class="modal">
+      <h2 class="annouceWinner"></h2>
+      <button class="restart-btn">Try Again!</button>
+    </div>
+  </div>
   <script src="script.js" defer></script>
 </body>
 </html>

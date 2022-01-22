@@ -4,18 +4,38 @@
   margin: 0;
 }
 
-body {
+html, body {
   background: #649ec2;
   color: #f1faee;
   margin: 0;
+  height: 100%;
   font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+/*Fix sizing*/
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.wrapper .header {
+  flex: 0 1 auto;
+}
+
+.wrapper .main-content {
+  flex: 1 1 auto;
+}
+
+.wrapper .footer {
+  flex: 0 1 40px;
 }
 
 /*Header*/
 .header {
   display: flex;
   justify-content: center;
-  padding: 40px 0px;
+  padding: 20px 0px;
   font-size: 2em;
   background: linear-gradient(to bottom, #1d3557, #457b9d);
   box-shadow: 5px 2px 20px #1d3557;
@@ -49,6 +69,7 @@ button:hover {
 img {
   padding: 35px;
   width: 200px;
+  height: auto;
 }
 
 .rockImg:hover {
@@ -106,8 +127,8 @@ img {
 
 .modal {
   background-color: #649ec2;
-  height: 25%;
-  width: 15%;
+  height: 15em;
+  width: 25em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,12 +153,15 @@ img {
   font-family: Comic Sans MS, Comic Sans, cursive;
 }
 
+.footer {
+  flex-grow: 1;
+}
+
 /*Footer*/
 .footer {
-  bottom: 0px;
-  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   background: linear-gradient(to top, #1d3557, #457b9d);
 }
 
@@ -146,6 +170,11 @@ img {
   align-items: center;
 }
 
-.footer img {
-  width: 100px;
+.wrapper a {
+  font-size: 20px;
+  padding: 15px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  color: #f1faee;
+  text-decoration: none;
+  font-weight: bold;
 }
