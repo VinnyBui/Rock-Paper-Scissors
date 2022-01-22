@@ -2,4 +2,4 @@
 Rock Paper Scissors game versus a computer\
 First to 5 wins
 
-Live demo of [RPS]().
+Live demo of [RPS](rps05.netlify.app)
