@@ -3,7 +3,7 @@ Rock Paper Scissors game versus a computer
 
 First to 5 wins
 
-Live demo of [RPS](https://vinnybui.github.io/Rock-paper-scissors/)
+Live demo of [RPS](https://vinnybui.github.io/Rock-Paper-Scissors/)
 
 Icon made by DinosoftLabs from www.flaticon.com
 
