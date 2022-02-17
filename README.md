@@ -3,7 +3,7 @@ Rock Paper Scissors game versus a computer
 
 First to 5 wins
 
-Live demo of [RPS](https://vinnybui.github.io/Rock-paper-scissors/)
+Live demo of [RPS](https://vinnybui.github.io/Rock-Paper-Scissors/)
 
 Icon made by DinosoftLabs from www.flaticon.com
 Game controller icon created by Freepik - Flaticon
@@ -25,4 +25,8 @@ Game controller icon created by Freepik - Flaticon
 
 **What could be improved**
 - Mobile support
+<<<<<<< HEAD
 - Better styling
+=======
+- Better styling 
+>>>>>>> a17735067570006771c274004230d008a7b5b199
