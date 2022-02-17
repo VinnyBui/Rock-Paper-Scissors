@@ -6,7 +6,7 @@ First to 5 wins
 Live demo of [RPS](https://vinnybui.github.io/Rock-paper-scissors/)
 
 Icon made by DinosoftLabs from www.flaticon.com
-
+Game controller icon created by Freepik - Flaticon
 ## built with
 **Technologies**
 - HTML
@@ -25,4 +25,4 @@ Icon made by DinosoftLabs from www.flaticon.com
 
 **What could be improved**
 - Mobile support
-- Better styling 
+- Better styling
