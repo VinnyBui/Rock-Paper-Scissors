@@ -25,8 +25,5 @@ Game controller icon created by Freepik - Flaticon
 
 **What could be improved**
 - Mobile support
-<<<<<<< HEAD
+
 - Better styling
-=======
-- Better styling 
->>>>>>> a17735067570006771c274004230d008a7b5b199
